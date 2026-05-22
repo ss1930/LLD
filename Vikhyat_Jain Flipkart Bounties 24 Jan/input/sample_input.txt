@@ -1,0 +1,19 @@
+preloadUsers user=user1 role=admin email=user1@flipkart.com; user=user2 role=agent email=user2@flipkart.com
+login user1
+reportBug title="Bug Title 1" description="Bug Description 1" severity=P0 reporterEmail=reporter.b1@email.com
+reportBug title="Bug Title 2" description="Bug Description 2" severity=P0 reporterEmail=reporter.b2@email.com
+assignBugReport title="Bug Title 1" user=user1
+assignBugReport title="Bug Title 2" user=user2
+updateBugStatus title="Bug Title 1" status="Report Review"
+updateBugStatus title="Bug Title 1" status="Acknowledged"
+updateBugStatus title="Bug Title 1" status="Bounty Review"
+updateBugReport title="Bug Title 1" bountyAmount=1000
+addComment title="Bug Title 1" text="comment text 1"
+logTime title="Bug Title 1" minutes=45 note="triage + reproduction"
+updateBugStatus title="Bug Title 1" status="Bounty Paid"
+updateBugStatus title="Bug Title 1" status="Closed"
+logout
+login user2
+updateBugStatus title="Bug Title 2" status="Report Review"
+updateBugStatus title="Bug Title 2" status="Rejected"
+updateBugStatus title="Bug Title 2" status="Closed"
